@@ -132,7 +132,7 @@ footer img
     {
         
         animation: startup 1.5s;
-        height: 120px;
+        height: 80px;
         padding-top: 50px;
     }
     /* Padding en breedte weg om de menuitems goed te laten zien */
@@ -148,7 +148,7 @@ footer img
     /* 6 items van 40 px hoog 6*40 = 240px*/
     #regularMenu ul 
     {
-        height: 240px;
+        height: 160px;
     }
     /* Breedte wordt naar 100% gezet zodat de items onder elkaar komen te staan
     voor het smalle scherm */
