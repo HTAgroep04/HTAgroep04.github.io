@@ -1,0 +1,159 @@
+/*
+
+Auteur: Lars van Teeffelen
+Aanmaakdatum: 12/02/2020
+Laatst bewerkt: 1/10/2021
+
+Omschrijving: CSS bestand voor de navigatiebar
+*/
+
+/* Vaste positie menu instellen */
+@keyframes startup {
+    0% {
+        
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+body
+{
+    background-color: #489EF5;
+    font-size: 24px;
+}
+body, html, ul, h1
+{
+    font-family: Poppins;
+    margin: 0px;
+    padding: 0px; 
+    
+}
+/* Styling menu */
+#regularMenu ul
+{
+    
+    z-index: 10;
+    width: 100%;
+    height: 60px;
+    position: fixed; 
+    display: block;
+    box-shadow: 0px 0px 15px;
+    background-color: #73CCFF;
+}
+/* Styling menu items */
+#regularMenu ul li 
+{
+    
+    float: left;
+    padding-top: 12px;
+    height: 40px;
+    list-style: none;
+    width: calc(100% / 4);
+    text-align: center;
+}
+#regularMenu ul li a
+{
+    font-family: Roboto;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+/* Styling hoveren over menuknoppen */
+#regularMenu ul li a:hover
+{
+    border-bottom: 2px solid white;
+}
+
+
+/* Standaard word het hamburgermenu niet weergegeven. */
+#burgerLogo
+{
+    z-index: 11;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    animation: startup 0.5s linear;
+    transition: 0.5s;
+}
+/* Opmaak voor het hamburger menu knopje */
+#burgerLogo div
+{
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin: 5px;
+    background-color: white;
+}
+/* Styling globale footer */
+footer
+{
+    font-family: Poppins;
+    padding: 5px 0 5px 20px;
+    box-shadow: 0 0 15px black;
+    width: calc(100% - 20px);
+    background-color: #73CCFF;
+    position: fixed;
+    bottom: 0;
+    font-size: 0.8em;
+}
+footer img 
+{
+    float: right;
+    padding-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Styling voor als het menu boven de 900px zit */
+@media screen and (max-width: 900px), screen and (max-width: 900px) and (orientation: landscape) {
+    /* Burgerlogo komt tevoorschijn */
+    #burgerLogo
+    {
+        display: block;
+    }
+    #regularMenu 
+    {
+        display: none;
+    }
+    /* Height van de ul word aangepast naar 120 omdat er max 
+    3 menuitems onder elkaar staan (40px per item *3 = 120px) */
+    #regularMenu ul 
+    {
+        
+        animation: startup 1.5s;
+        height: 120px;
+        padding-top: 50px;
+    }
+    /* Padding en breedte weg om de menuitems goed te laten zien */
+    #regularMenu ul li
+    {
+        padding-top: 0px;
+        width: 50%;
+    }
+}
+
+/* Styling voor als het menu onder de 600px zit  */
+@media screen and (max-width: 600px), screen and (max-width: 600px) and (orientation: portrait) {
+    /* 6 items van 40 px hoog 6*40 = 240px*/
+    #regularMenu ul 
+    {
+        height: 240px;
+    }
+    /* Breedte wordt naar 100% gezet zodat de items onder elkaar komen te staan
+    voor het smalle scherm */
+    #regularMenu ul li
+    {
+        width: 100%;
+    }
+}

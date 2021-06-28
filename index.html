@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- 
+
+Auteur: Lars van Teeffelen
+Aanmaakdatum: 12/02/2020
+Laatst bewerkt: 1/10/2021
+
+Omschrijving: Homepagina van Portfolio
+
+-->
+
+<html>
+
+<head>
+    <!-- Opgeven van een title -->
+    <title>
+        Home
+    </title>
+    <!-- Tekenset declareren -->
+    <meta charset="utf-8">
+    <!-- Viewport declareren -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Stylesheet gelinkt -->
+    <link rel="icon" href="images/portfolio.png">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+
+    <script src="scripts/navbar.js" defer></script>
+</head>
+
+<body>
+    <!-- Header en Menubar van de homepagina -->
+    <header>
+
+        <nav>
+            <!-- Navigatiemenu als de grootte boven 900 pixels is-->
+            <div id="regularMenu">
+                
+                <ul>
+					<li><a href="index.html">Home</a></li>
+                    <li><a href="pages/globalgoals.html">Global Goals</a></li>
+                    <li><a href="pages/visualisatie.html">Visualisatie</a></li>
+                    <li><a href="pages/kosten.html">Kostenbegroting</a></li>
+                    
+                </ul>
+            </div>
+            <div id="burgerLogo" onclick="openBurgerMenu()">
+                <div id="line1"></div>
+                <div id="line2"></div>
+                <div id="line3"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Main article met de paginainhoud -->
+        <article id="vak1">
+            <h1>Welkom bij ons smart home inspiratiehuis!</h1>
+            <p>
+                Welkom bij ons idee voor een smart home inspiratiehuis, Op deze website kun je alles vinden over ons huis. 
+                Onder andere de global goals, Onze ontwerpen en de kostenbegroting
+                <br><br>
+                Ons plan is een koepelvormig huis met het dak plat gemaakt. zodat we daar zonnepanelen die de zon volgen op kunnen bouwen. Omdat ons huis koepelvormig is glijd het water er goed vanaf. Rond ons huis hebben we namelijk opvangbakken voor het water zodat je de wc kan doorspoelen, douchen, afwassen, Alles!
+                
+            </p>
+            <img src="images/huis.jpg" alt="">
+        </article>
+    </main>
+
+    <footer>
+        &copy; HTA Groep 04
+    </footer>
+</body>
+
+</html>
